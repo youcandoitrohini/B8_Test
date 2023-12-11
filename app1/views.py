@@ -22,6 +22,7 @@ from .models import Student
     # return HttpResponse(f"Welcome to Django Application...!!!, {final_studs}") 
 
 def welcome(request):
+    print(request.user)
     return render(request, "home.html")
 
 # query params - Query Parameters
