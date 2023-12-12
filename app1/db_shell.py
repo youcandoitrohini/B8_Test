@@ -477,6 +477,8 @@ from django.contrib.auth.models import User
 # 1st way 
 from django.db import connection
 cursor = connection.cursor()
-# cursor.execute('''SELECT * FROM student where id > 8''')
-data = cursor.fetchmany(3)
+cursor.execute('''SELECT * FROM student where id > 8''')
+data = cursor.fetchmany(4)
+for i in data:
+    print(i)
 print(data)
